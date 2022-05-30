@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PerpusKu" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-GDB3OQG\SQLEXPRESS;Initial Catalog=PerpusKu;Integrated Security=True" SettingsObjectName="Perpus_Ku.Properties.Settings" SettingsPropertyName="PerpusKuConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.[_book]" Member="_books">
+    <Type Name="_book">
+      <Column Name="[_isbn]" Member="_isbn" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[_title]" Member="_title" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[_author]" Member="_author" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[_year]" Member="_year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[_publisher]" Member="_publisher" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[_classification_id]" Member="_classification_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[_location]" Member="_location" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[_amount]" Member="_amount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[_pdf]" Member="_pdf" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="_book__circulation_detail" Member="_circulation_details" ThisKey="_isbn" OtherKey="_isbn" Type="_circulation_detail" />
+      <Association Name="_classification__book" Member="_classification" ThisKey="_classification_id" OtherKey="_id" Type="_classification" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[_user]" Member="_users">
+    <Type Name="_user">
+      <Column Name="[_user_id]" Member="_user_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[_identity_number]" Member="_identity_number" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[_identity_type]" Member="_identity_type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[_name]" Member="_name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[_username]" Member="_username" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[_password]" Member="_password" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[_level]" Member="_level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="_user__circulation" Member="_circulations" ThisKey="_user_id" OtherKey="_user" Type="_circulation" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[_circulation]" Member="_circulations">
+    <Type Name="_circulation">
+      <Column Name="[_circulation_id]" Member="_circulation_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[_member_id]" Member="_member_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[_date_start]" Member="_date_start" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="[_date_finish]" Member="_date_finish" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="[_date_return]" Member="_date_return" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="[_status]" Member="_status" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="[_user]" Member="_user" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="_circulation__circulation_detail" Member="_circulation_details" ThisKey="_circulation_id" OtherKey="_circulation_id" Type="_circulation_detail" />
+      <Association Name="_user__circulation" Member="_user1" ThisKey="_user" OtherKey="_user_id" Type="_user" IsForeignKey="true" />
+      <Association Name="_member__circulation" Member="_member" ThisKey="_member_id" OtherKey="_member_id" Type="_member" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[_circulation_detail]" Member="_circulation_details">
+    <Type Name="_circulation_detail">
+      <Column Name="[_id]" Member="_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[_circulation_id]" Member="_circulation_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[_isbn]" Member="_isbn" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="_book__circulation_detail" Member="_book" ThisKey="_isbn" OtherKey="_isbn" Type="_book" IsForeignKey="true" />
+      <Association Name="_circulation__circulation_detail" Member="_circulation" ThisKey="_circulation_id" OtherKey="_circulation_id" Type="_circulation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[_classification]" Member="_classifications">
+    <Type Name="_classification">
+      <Column Name="[_id]" Member="_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[_name]" Member="_name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="_classification__book" Member="_books" ThisKey="_id" OtherKey="_classification_id" Type="_book" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[_member]" Member="_members">
+    <Type Name="_member">
+      <Column Name="[_member_id]" Member="_member_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[_identity_number]" Member="_identity_number" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[_identity_type]" Member="_identity_type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[_name]" Member="_name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[_registration_date]" Member="_registration_date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="_member__circulation" Member="_circulations" ThisKey="_member_id" OtherKey="_member_id" Type="_circulation" />
+    </Type>
+  </Table>
+</Database>

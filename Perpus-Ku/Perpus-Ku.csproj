@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2080995F-B130-463F-9CD2-C60B4F96A00E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Perpus_Ku</RootNamespace>
+    <AssemblyName>Perpus-Ku</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BukuLihatDaftarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BukuLihatDaftarForm.Designer.cs">
+      <DependentUpon>BukuLihatDaftarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataClasses1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="ExitANotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExitANotification.Designer.cs">
+      <DependentUpon>ExitANotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExitBNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExitBNotification.Designer.cs">
+      <DependentUpon>ExitBNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IsianKosongErrorNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IsianKosongErrorNotification.Designer.cs">
+      <DependentUpon>IsianKosongErrorNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KatalogDetailBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KatalogDetailBookForm.Designer.cs">
+      <DependentUpon>KatalogDetailBookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KatalogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KatalogForm.Designer.cs">
+      <DependentUpon>KatalogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginErrorNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginErrorNotification.Designer.cs">
+      <DependentUpon>LoginErrorNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogOutNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogOutNotification.Designer.cs">
+      <DependentUpon>LogOutNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainAdministratorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainAdministratorForm.Designer.cs">
+      <DependentUpon>MainAdministratorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainPustakawanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPustakawanForm.Designer.cs">
+      <DependentUpon>MainPustakawanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Method.cs" />
+    <Compile Include="PengaturanPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PengaturanPasswordForm.Designer.cs">
+      <DependentUpon>PengaturanPasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerpustakaanLihatAnggotaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerpustakaanLihatAnggotaForm.Designer.cs">
+      <DependentUpon>PerpustakaanLihatAnggotaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PilihLevelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PilihLevelForm.Designer.cs">
+      <DependentUpon>PilihLevelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PustakawanDaftarBukuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PustakawanDaftarBukuForm.Designer.cs">
+      <DependentUpon>PustakawanDaftarBukuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PustakawanHapusAnggotaNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PustakawanHapusAnggotaNotification.Designer.cs">
+      <DependentUpon>PustakawanHapusAnggotaNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PustakawanHapusBukuDariSirkulasiNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PustakawanHapusBukuDariSirkulasiNotification.Designer.cs">
+      <DependentUpon>PustakawanHapusBukuDariSirkulasiNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PustakawanHapusBukuNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PustakawanHapusBukuNotification.Designer.cs">
+      <DependentUpon>PustakawanHapusBukuNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PustakawanHapusKlasifikasiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PustakawanHapusKlasifikasiForm.Designer.cs">
+      <DependentUpon>PustakawanHapusKlasifikasiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PustakawanHapusSirkulasiNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PustakawanHapusSirkulasiNotification.Designer.cs">
+      <DependentUpon>PustakawanHapusSirkulasiNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PustakawanManajemenAnggotaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PustakawanManajemenAnggotaForm.Designer.cs">
+      <DependentUpon>PustakawanManajemenAnggotaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PustakawanManajemenKlasifikasiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PustakawanManajemenKlasifikasiForm.Designer.cs">
+      <DependentUpon>PustakawanManajemenKlasifikasiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PengaturanPasswordBaruErrorNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PengaturanPasswordBaruErrorNotification.Designer.cs">
+      <DependentUpon>PengaturanPasswordBaruErrorNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PengaturanPasswordLamaErrorNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PengaturanPasswordLamaErrorNotification.Designer.cs">
+      <DependentUpon>PengaturanPasswordLamaErrorNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PustakawanSirkulasiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PustakawanSirkulasiForm.Designer.cs">
+      <DependentUpon>PustakawanSirkulasiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PustakawanTambahAnggotaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PustakawanTambahAnggotaForm.Designer.cs">
+      <DependentUpon>PustakawanTambahAnggotaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PustakawanTambahBukuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PustakawanTambahBukuForm.Designer.cs">
+      <DependentUpon>PustakawanTambahBukuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PustakawanTambahBukuKeSirkulasiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PustakawanTambahBukuKeSirkulasiForm.Designer.cs">
+      <DependentUpon>PustakawanTambahBukuKeSirkulasiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PustakawanTambahSirkulasiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PustakawanTambahSirkulasiForm.Designer.cs">
+      <DependentUpon>PustakawanTambahSirkulasiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PustakawanUbahBukuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PustakawanUbahBukuForm.Designer.cs">
+      <DependentUpon>PustakawanUbahBukuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PustakawanUbahKlasifikasiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PustakawanUbahKlasifikasiForm.Designer.cs">
+      <DependentUpon>PustakawanUbahKlasifikasiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PustakawanUbahSirkulasiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PustakawanUbahSirkulasiForm.Designer.cs">
+      <DependentUpon>PustakawanUbahSirkulasiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PustakawanUpdateAnggotaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PustakawanUpdateAnggotaForm.Designer.cs">
+      <DependentUpon>PustakawanUpdateAnggotaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SirkulasiLihatRiwayatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SirkulasiLihatRiwayatForm.Designer.cs">
+      <DependentUpon>SirkulasiLihatRiwayatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserManajemenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManajemenForm.Designer.cs">
+      <DependentUpon>UserManajemenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserHapusNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserHapusNotification.Designer.cs">
+      <DependentUpon>UserHapusNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserResetPasswordNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserResetPasswordNotification.Designer.cs">
+      <DependentUpon>UserResetPasswordNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserTambahForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserTambahForm.Designer.cs">
+      <DependentUpon>UserTambahForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserUpdateForm.Designer.cs">
+      <DependentUpon>UserUpdateForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BukuLihatDaftarForm.resx">
+      <DependentUpon>BukuLihatDaftarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExitANotification.resx">
+      <DependentUpon>ExitANotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExitBNotification.resx">
+      <DependentUpon>ExitBNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IsianKosongErrorNotification.resx">
+      <DependentUpon>IsianKosongErrorNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KatalogDetailBookForm.resx">
+      <DependentUpon>KatalogDetailBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KatalogForm.resx">
+      <DependentUpon>KatalogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginErrorNotification.resx">
+      <DependentUpon>LoginErrorNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogOutNotification.resx">
+      <DependentUpon>LogOutNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPustakawanForm.resx">
+      <DependentUpon>MainPustakawanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PengaturanPasswordForm.resx">
+      <DependentUpon>PengaturanPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerpustakaanLihatAnggotaForm.resx">
+      <DependentUpon>PerpustakaanLihatAnggotaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PilihLevelForm.resx">
+      <DependentUpon>PilihLevelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PustakawanDaftarBukuForm.resx">
+      <DependentUpon>PustakawanDaftarBukuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PustakawanHapusAnggotaNotification.resx">
+      <DependentUpon>PustakawanHapusAnggotaNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PustakawanHapusBukuDariSirkulasiNotification.resx">
+      <DependentUpon>PustakawanHapusBukuDariSirkulasiNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PustakawanHapusBukuNotification.resx">
+      <DependentUpon>PustakawanHapusBukuNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PustakawanHapusKlasifikasiForm.resx">
+      <DependentUpon>PustakawanHapusKlasifikasiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PustakawanHapusSirkulasiNotification.resx">
+      <DependentUpon>PustakawanHapusSirkulasiNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PustakawanManajemenAnggotaForm.resx">
+      <DependentUpon>PustakawanManajemenAnggotaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PustakawanManajemenKlasifikasiForm.resx">
+      <DependentUpon>PustakawanManajemenKlasifikasiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PengaturanPasswordBaruErrorNotification.resx">
+      <DependentUpon>PengaturanPasswordBaruErrorNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PengaturanPasswordLamaErrorNotification.resx">
+      <DependentUpon>PengaturanPasswordLamaErrorNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PustakawanSirkulasiForm.resx">
+      <DependentUpon>PustakawanSirkulasiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PustakawanTambahAnggotaForm.resx">
+      <DependentUpon>PustakawanTambahAnggotaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PustakawanTambahBukuForm.resx">
+      <DependentUpon>PustakawanTambahBukuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PustakawanTambahBukuKeSirkulasiForm.resx">
+      <DependentUpon>PustakawanTambahBukuKeSirkulasiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PustakawanTambahSirkulasiForm.resx">
+      <DependentUpon>PustakawanTambahSirkulasiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PustakawanUbahBukuForm.resx">
+      <DependentUpon>PustakawanUbahBukuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PustakawanUbahKlasifikasiForm.resx">
+      <DependentUpon>PustakawanUbahKlasifikasiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PustakawanUbahSirkulasiForm.resx">
+      <DependentUpon>PustakawanUbahSirkulasiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PustakawanUpdateAnggotaForm.resx">
+      <DependentUpon>PustakawanUpdateAnggotaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SirkulasiLihatRiwayatForm.resx">
+      <DependentUpon>SirkulasiLihatRiwayatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManajemenForm.resx">
+      <DependentUpon>UserManajemenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserHapusNotification.resx">
+      <DependentUpon>UserHapusNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserResetPasswordNotification.resx">
+      <DependentUpon>UserResetPasswordNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserTambahForm.resx">
+      <DependentUpon>UserTambahForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUpdateForm.resx">
+      <DependentUpon>UserUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainAdministratorForm.resx">
+      <DependentUpon>MainAdministratorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="DataClasses1.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
